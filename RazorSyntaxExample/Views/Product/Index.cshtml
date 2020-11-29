@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @foreach (KeyValuePair<string, int> productPrices in ViewBag.ProductPrices)
+    {
+    <p>
+        <div>
+            Product name: @productPrices.Key
+        </div>
+        <div>
+            Product price including tax: @(productPrices.Value * 1.2)
+        </div>
+    </p>
+    }
+</body>
+</html>
